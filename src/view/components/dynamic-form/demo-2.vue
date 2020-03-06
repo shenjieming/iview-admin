@@ -230,7 +230,7 @@ function mock () {
       // "format": "yyyy-MM-dd HH:mm:ss",
       // 展示的日期格式
       'placement': 'bottom-start',
-      //	日期选择器出现的位置，可选值为toptop-starttop-endbottombottom-startbottom-endleftleft-startleft-endrightright-startright-end
+      // 日期选择器出现的位置，可选值为toptop-starttop-endbottombottom-startbottom-endleftleft-startleft-endrightright-startright-end
       'placeholder': '请选择获得时间',
       // 占位文本
       'confirm': false,
