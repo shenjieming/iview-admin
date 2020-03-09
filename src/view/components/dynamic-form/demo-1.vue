@@ -1,5 +1,9 @@
 <template>
-  <form-create :rule="rule" :option="option"/>
+  <div>
+    {{rule}}
+    <form-create :rule="rule" :option="option"/>
+  </div>
+
 </template>
 
 <script>

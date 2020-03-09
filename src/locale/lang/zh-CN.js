@@ -54,5 +54,8 @@ export default {
   'mix-chart': '混合图表',
   line: '折线图',
   keyboard: '键盘图表',
-  chart: '图表类型'
+  chart: '图表类型',
+  radius: '饼图',
+  'dev-print': '自定义打印',
+  'drawer-demo': '抽屉盒demo'
 }

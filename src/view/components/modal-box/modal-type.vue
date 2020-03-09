@@ -1,20 +1,19 @@
 <!--设定默认弹窗尺寸-->
 <template>
-  <div>
-    <Modal
-      :value="isActive"
-      :fullscreen="fullscreen"
-      :title="size"
-      draggable
-      @on-cancel="cancel"
-      @on-ok="ok"
-      @on-visible-change="visibleChange"
-      :width="width"
-      :style="{width: width, height: height}">
-      <slot></slot>
-      <div>This is a {{size}} modal</div>
-    </Modal>
-  </div>
+  <Modal
+    draggable
+    v-model="isActive"
+    :fullscreen="fullscreen"
+    draggable
+    @on-cancel="cancel"
+    @on-ok="ok"
+    @on-visible-change="visibleChange"
+    :width="width"
+    :style="{width: width, height: height}">
+    <p slot="header"> 高级查询</p>
+    <slot></slot>
+    <slot name="footer"></slot>
+  </Modal>
 </template>
 
 <script>

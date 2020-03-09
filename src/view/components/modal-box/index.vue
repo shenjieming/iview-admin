@@ -11,7 +11,7 @@
     <FormItem label="">
       <Button @click="modalClick">点击</Button>
     </FormItem>
-    <modal-type :isActive="isActive" :size="modelSize" :modelSize="modelSize" @cancel="cancel" @ok="ok" @visibleChange="visibleChange">
+    <modal-type :isActive="isActive" :size="modelSize" :modelSize="modelSize" @visibleChange="visibleChange" @cancel="cancel" @ok="ok">
       <span>
         这个是尺寸：{{modelSize}}
       </span>

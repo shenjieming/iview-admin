@@ -44,16 +44,21 @@
         <label><input type="checkbox" v-model="rtl">RTL mode</label>
       </p>
     </div>
+    <p>点击加载更多实例:</p>
+    <select-more></select-more>
   </div>
 </template>
 
 <script>
+
+import SelectMore from './select-more'
 import TreeSelect from '@riophae/vue-treeselect'
 import '@riophae/vue-treeselect/dist/vue-treeselect.css'
 export default {
   name: 'index',
   components: {
-    TreeSelect
+    TreeSelect,
+    SelectMore
   },
   data () {
     return {

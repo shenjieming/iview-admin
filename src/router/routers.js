@@ -260,6 +260,15 @@ export default [
           title: '附件上传'
         },
         component: () => import('@/view/components/upload/index.vue')
+      },
+      {
+        path: 'drawer-demo',
+        name: 'drawer-demo',
+        meta: {
+          icon: '_bear',
+          title: '抽屉盒demo'
+        },
+        component: () => import('@/view/components/drawer-demo/index.vue')
       }
     ]
   },
@@ -289,6 +298,15 @@ export default [
           title: '折线图'
         },
         component: () => import('@/view/components/line/index.vue')
+      },
+      {
+        path: 'radius',
+        name: 'radius',
+        meta: {
+          icon: '_bear',
+          title: '饼图'
+        },
+        component: () => import('@/view/components/radius/index.vue')
       },
       {
         path: 'mix-chart',
