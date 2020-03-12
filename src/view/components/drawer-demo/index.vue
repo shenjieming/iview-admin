@@ -10,7 +10,12 @@
           <Button type="primary" @click="advanceSearch">高级搜索</Button>
         </ButtonGroup>
       </Row>
-      <dynamic-table :columns="columns" :dataList="dataList" @selectChange="selectChange" :appendList="appendList" :indexType="indexType" ref="dTable"></dynamic-table>
+      <dynamic-table :columns="columns" :dataList="dataList" @selectChange="selectChange" :appendList="appendList" :indexType="indexType" ref="dTable">
+        <template slot="button">
+          <Button type="primary" @click="importExcel">导入</Button>
+          <Button type="info" @click="exportExcel">导出</Button>
+        </template>
+      </dynamic-table>
       <pagination :pageSize.sync="pageSize" :total="total" :pageNum.sync="pageNum" @queryFnc="queryFnc"></pagination>
     </Card>
     <drawer-template ref="drawer" :formData="formData"></drawer-template>
@@ -132,7 +137,6 @@
     methods: {
       // 高级查询
       advanceSearch () {
-        console.log(2333)
         this.$refs.advance.init()
       },
       // 选中事件
@@ -160,6 +164,13 @@
       // 列表查询
       queryFnc () {
         alert(JSON.stringify(this.dataForm))
+      },
+      // 导入
+      importExcel () {
+      },
+      // 导出
+      exportExcel () {
+        this.$Message.success('导出成功！')
       }
     }
   }

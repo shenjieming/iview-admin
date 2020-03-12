@@ -1,5 +1,6 @@
 <template>
   <div>
+    附件上传：
     <div class="demo-upload-list" v-for="(item,index) in uploadList" :key="index">
       <template v-if="item.status === 'finished'">
         <img :src="item.url">

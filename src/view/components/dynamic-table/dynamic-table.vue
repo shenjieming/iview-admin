@@ -15,8 +15,9 @@
         </Checkbox-group>
       </div>
     </Poptip>
-    <slot></slot>
+    <slot name="button"></slot>
     <Table
+      style="margin-top: 5px"
       border
       ellipsis
       stripe

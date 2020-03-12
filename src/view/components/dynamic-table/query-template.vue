@@ -10,6 +10,7 @@
         <Option :value="0">未打印</Option>
         <Option :value="1">已打印</Option>
       </Select>
+      <auto-complete class="item"></auto-complete>
     </div>
     <transition name="list-query-transform">
       <div v-show="queryFlag === 'advance'" class="advance-query">
@@ -41,19 +42,23 @@
 </template>
 
 <script>
-export default {
-  name: 'query-template',
-  props: {
-    queryFlag: {
-      type: String,
-      default: 'simple'
+  import autoComplete from '../select-tree/auto-complete'
+  export default {
+    name: 'query-template',
+    props: {
+      queryFlag: {
+        type: String,
+        default: 'simple'
+      },
+      dataForm: {
+        type: Object,
+        default: () => {}
+      }
     },
-    dataForm: {
-      type: Object,
-      default: () => {}
+    components: {
+      autoComplete
     }
   }
-}
 </script>
 <style lang="less">
   .list-query {

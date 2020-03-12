@@ -1,27 +1,27 @@
 <template>
-  <Modal v-model="isActive">
+  <Modal v-model="isActive"  class="advance-search">
     <p slot="header"> 高级查询</p>
     <Form  ref="formInline"  inline :label-width="90">
       <FormItem label="样衣款号" >
-        <Input v-model="dataForm.size1" placeholder="请输入样衣款号" clearable></Input>
+        <Input v-model="dataForm.size1" placeholder="请输入样衣款号" clearable class="item"></Input>
       </FormItem>
       <FormItem label="样衣款号" >
-        <Input v-model="dataForm.size2" placeholder="请输入样衣款号" clearable></Input>
+        <Input v-model="dataForm.size2" placeholder="请输入样衣款号" clearable class="item"></Input>
       </FormItem>
       <FormItem label="样衣款号" >
-        <Input v-model="dataForm.size3" placeholder="请输入样衣款号" clearable></Input>
+        <Input v-model="dataForm.size3" placeholder="请输入样衣款号" clearable class="item"></Input>
       </FormItem>
       <FormItem label="样衣款号" >
-        <Input v-model="dataForm.size4" placeholder="请输入样衣款号" clearable></Input>
+        <Input v-model="dataForm.size4" placeholder="请输入样衣款号" clearable class="item"></Input>
       </FormItem>
       <FormItem label="打印状态">
-        <Select v-model="dataForm.printStateList"  placeholder="请选择打印状态" style="width: 100%" clearable>
+        <Select v-model="dataForm.printStateList"  placeholder="请选择打印状态" clearable class="item">
           <Option :value="0">未打印</Option>
           <Option :value="1">已打印</Option>
         </Select>
       </FormItem>
       <FormItem label="登记时间">
-        <DatePicker type="daterange" ref="DatePicker" v-model="dataForm.dateTimePicker" placeholder="请选择"></DatePicker>
+        <DatePicker type="daterange" ref="DatePicker" v-model="dataForm.dateTimePicker" placeholder="请选择" class="item"></DatePicker>
       </FormItem>
     </Form>
     <p slot="footer">
@@ -70,6 +70,10 @@
   }
 </script>
 
-<style scoped>
-
+<style scoped lang="less">
+.advance-search {
+  .item {
+    width: 210px;
+  }
+}
 </style>

@@ -44,21 +44,21 @@
         <label><input type="checkbox" v-model="rtl">RTL mode</label>
       </p>
     </div>
-    <p>点击加载更多实例:</p>
-    <select-more></select-more>
+    <p>搜索加载更多示例</p>
+    <auto-complete></auto-complete>
   </div>
 </template>
 
 <script>
 
-import SelectMore from './select-more'
+import AutoComplete from './auto-complete'
 import TreeSelect from '@riophae/vue-treeselect'
 import '@riophae/vue-treeselect/dist/vue-treeselect.css'
 export default {
   name: 'index',
   components: {
     TreeSelect,
-    SelectMore
+    AutoComplete
   },
   data () {
     return {
