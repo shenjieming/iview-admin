@@ -17,6 +17,7 @@ import VOrgTree from 'v-org-tree'
 import 'view-design/dist/styles/iview.css'
 import 'v-org-tree/dist/v-org-tree.css'
 import formCreate from '@form-create/iview'
+import animated from 'animate.css'
 import './index.less'
 // 实际打包时应该不引入mock
 /* eslint-disable */
@@ -28,6 +29,7 @@ Vue.use(ViewUI, {
 Vue.use(TreeTable)
 Vue.use(VOrgTree)
 Vue.use(formCreate)
+Vue.use(animated)
 /**
  * @description 注册admin内置插件
  */

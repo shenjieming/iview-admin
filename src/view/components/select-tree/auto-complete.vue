@@ -1,7 +1,5 @@
 <template>
   <div style="display: inline-block">
-<!--    当前页： {{pageNum}}-->
-<!--    {{data}}-->
     <AutoComplete
       clearable
       v-model="value"
@@ -9,10 +7,8 @@
       @on-blur="blur"
       transfer
       placeholder="请输入...">
-      <Scroll height="170" :on-reach-bottom="handleReachBottom" :distance-to-edge="10">
-<!--        v-show="!item.sortIndex || item.sortIndex !== -1"-->
+      <Scroll height="340" :on-reach-bottom="handleReachBottom" :distance-to-edge="10">
         <Option v-for="(item,index) in data" :value="item.color" :key="index"  >{{ item.color }}</Option>
-<!--        <p class=" ivu-select-item demo-auto-complete-more" @click="getDataList"  v-if="loading">加载更多数据...</p>-->
       </Scroll>
     </AutoComplete>
   </div>
@@ -27,9 +23,9 @@
         value: '',
         oldVal: '',
         pageNum: 1,
-        // 原始数据记录
-        odrList: JSON.parse(JSON.stringify(defaultList)),
         pageSize: 5,
+        // 原始数据记录（从后端拉取）
+        odrList: JSON.parse(JSON.stringify(defaultList)),
         data: JSON.parse(JSON.stringify(defaultList)),
       }
     },
@@ -52,7 +48,6 @@
           this.loading = true
           resolve()
         })
-
       },
       change (val) {
         /*
